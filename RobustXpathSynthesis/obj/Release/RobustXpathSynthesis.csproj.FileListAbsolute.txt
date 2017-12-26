@@ -1,0 +1,8 @@
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\bin\Release\RobustXpathSynthesis.exe.config
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\bin\Release\RobustXpathSynthesis.exe
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\bin\Release\RobustXpathSynthesis.pdb
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\bin\Release\HtmlAgilityPack.dll
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\bin\Release\HtmlAgilityPack.pdb
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\bin\Release\HtmlAgilityPack.xml
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\obj\Release\RobustXpathSynthesis.exe
+C:\Users\omari\Documents\Visual Studio 2015\Projects\RobustXpathSynthesis\RobustXpathSynthesis\obj\Release\RobustXpathSynthesis.pdb

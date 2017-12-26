@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D06783A2-39B7-455B-A372-27D76433150F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RobustXpathSynthesis</RootNamespace>
+    <AssemblyName>RobustXpathSynthesis</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Reflection, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="weka, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\weka-net\weka.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\alignment-baseline\XpathAlignment.cs" />
+    <Compile Include="src\config\FeatureCosts.cs" />
+    <Compile Include="src\decisiontree\DecisionNode.cs" />
+    <Compile Include="src\decisiontree\DecisionTreeLearning.cs" />
+    <Compile Include="src\ds\DomPool.cs" />
+    <Compile Include="src\ds\Feature.cs" />
+    <Compile Include="src\ds\FeatureSet.cs" />
+    <Compile Include="src\parse-results\parseres.cs" />
+    <Compile Include="src\phases\FeatureExtraction.cs" />
+    <Compile Include="src\phases\FeatureFiltering.cs" />
+    <Compile Include="src\phases\FeatureGeneralization.cs" />
+    <Compile Include="src\phases\LearnXpathWrapper.cs" />
+    <Compile Include="src\phases\OverallArchive2Testing.cs" />
+    <Compile Include="src\phases\OverallSeenTesting.cs" />
+    <Compile Include="src\phases\OverallArchiveTesting.cs" />
+    <Compile Include="src\phases\OverallTesting.cs" />
+    <Compile Include="src\testing\SiteInfo.cs" />
+    <Compile Include="src\testing\TestSites.cs" />
+    <Compile Include="src\testing\URLDownloader.cs" />
+    <Compile Include="src\testing\WebClientModified.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\utilities\Statistics.cs" />
+    <Compile Include="src\utilities\XpathTools.cs" />
+    <Compile Include="src\weka-baseline\SVM.cs" />
+    <Compile Include="src\weka-baseline\NB.cs" />
+    <Compile Include="src\weka-baseline\ModelLearner.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\RobustXpathSynthesis.exe.config" />
+    <None Include="bin\Debug\RobustXpathSynthesis.vshost.exe.config" />
+    <None Include="bin\Debug\RobustXpathSynthesis.vshost.exe.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\files\" />
+    <Folder Include="files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\archive\barnesandnoble\2010.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\2011.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\2012.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\2014.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\2016.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\author\2010_author.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\author\2011_author.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\author\2012_author.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\author\2014_author.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\author\2016_author.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\price\2010_price.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\price\2011_price.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\price\2012_price.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\price\2014_price.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\price\2016_price.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\title\2010_title.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\title\2011_title.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\title\2012_title.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\title\2014_title.html" />
+    <Content Include="bin\Debug\archive\barnesandnoble\title\2016_title.html" />
+    <Content Include="bin\Debug\archive\infibeam\2010.html" />
+    <Content Include="bin\Debug\archive\infibeam\2011.html" />
+    <Content Include="bin\Debug\archive\infibeam\2012.html" />
+    <Content Include="bin\Debug\archive\infibeam\2014.html" />
+    <Content Include="bin\Debug\archive\infibeam\2016.html" />
+    <Content Include="bin\Debug\archive\infibeam\price\2010_price.html" />
+    <Content Include="bin\Debug\archive\infibeam\price\2011_price.html" />
+    <Content Include="bin\Debug\archive\infibeam\price\2012_price.html" />
+    <Content Include="bin\Debug\archive\infibeam\price\2014_price.html" />
+    <Content Include="bin\Debug\archive\infibeam\price\2016_price.html" />
+    <Content Include="bin\Debug\archive\infibeam\title\2010_title.html" />
+    <Content Include="bin\Debug\archive\infibeam\title\2011_title.html" />
+    <Content Include="bin\Debug\archive\infibeam\title\2012_title.html" />
+    <Content Include="bin\Debug\archive\infibeam\title\2014_title.html" />
+    <Content Include="bin\Debug\archive\infibeam\title\2016.html" />
+    <Content Include="bin\Debug\archive\powells\2010.html" />
+    <Content Include="bin\Debug\archive\powells\2011.html" />
+    <Content Include="bin\Debug\archive\powells\2012.html" />
+    <Content Include="bin\Debug\archive\powells\2014.html" />
+    <Content Include="bin\Debug\archive\powells\2016.html" />
+    <Content Include="bin\Debug\archive\powells\author\2010_author.html" />
+    <Content Include="bin\Debug\archive\powells\author\2011_author.html" />
+    <Content Include="bin\Debug\archive\powells\author\2012_author.html" />
+    <Content Include="bin\Debug\archive\powells\author\2014_author.html" />
+    <Content Include="bin\Debug\archive\powells\author\2016_author.html" />
+    <Content Include="bin\Debug\archive\powells\price\2010_price.html" />
+    <Content Include="bin\Debug\archive\powells\price\2011_price.html" />
+    <Content Include="bin\Debug\archive\powells\price\2012_price.html" />
+    <Content Include="bin\Debug\archive\powells\price\2014_price.html" />
+    <Content Include="bin\Debug\archive\powells\price\2016_price.html" />
+    <Content Include="bin\Debug\archive\powells\title\2010_title.html" />
+    <Content Include="bin\Debug\archive\powells\title\2011_title.html" />
+    <Content Include="bin\Debug\archive\powells\title\2012_title.html" />
+    <Content Include="bin\Debug\archive\powells\title\2014_title.html" />
+    <Content Include="bin\Debug\archive\powells\title\2016_title.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\2008.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\2009.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\2011.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\2014.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\2016.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\author\2008_author.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\author\2009_author.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\author\2011_author.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\author\2014_author.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\author\2016_author.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\price\2008_price.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\price\2009_price.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\price\2011_price.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\price\2014_price.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\price\2016_price.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\title\2008_title.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\title\2009_title.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\title\2011_title.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\title\2014_title.html" />
+    <Content Include="bin\Debug\archive\thriftbooks\title\2016_title.html" />
+    <Content Include="bin\Debug\RobustXpathSynthesis.exe" />
+    <Content Include="bin\Debug\RobustXpathSynthesis.pdb" />
+    <Content Include="bin\Debug\RobustXpathSynthesis.vshost.exe" />
+    <Content Include="bin\weka-net\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\weka-net\ikvm-native-win32-x86.dll" />
+    <Content Include="bin\weka-net\IKVM.AWT.WinForms.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Beans.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Charsets.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Corba.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Core.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Jdbc.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Management.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Media.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Misc.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Naming.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Remoting.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Security.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.SwingAWT.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Text.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Tools.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.Util.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.XML.API.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.XML.Bind.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.XML.Crypto.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.XML.Parse.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.XML.Transform.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.XML.WebServices.dll" />
+    <Content Include="bin\weka-net\IKVM.OpenJDK.XML.XPath.dll" />
+    <Content Include="bin\weka-net\IKVM.Reflection.dll" />
+    <Content Include="bin\weka-net\IKVM.Runtime.dll" />
+    <Content Include="bin\weka-net\IKVM.Runtime.JNI.dll" />
+    <Content Include="bin\weka-net\weka.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
